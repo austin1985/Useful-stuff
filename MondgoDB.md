@@ -17,7 +17,7 @@
 
 `mongo --eval 'db.runCommand({ connectionStatus: 1 })'`
 
-##Managing the MongoDB Service
+## Managing the MongoDB Service
 
 **Verify the status of the service**
 

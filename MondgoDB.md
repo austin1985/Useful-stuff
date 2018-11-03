@@ -39,7 +39,7 @@
 
 `sudo systemctl disable mongodb`
 
-Enable MongoDb on startup again.
+**Enable MongoDb on startup again**
 
 `sudo systemctl enable mongodb`
 

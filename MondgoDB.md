@@ -99,6 +99,12 @@ First argument tells which documents to alter, second argument tells what needs 
 `db.<collection_name>.updateMany({},{$set: {<field>:<value>}})`
 
 
+**Projection - filtering out fieds from result documents**
+
+Every field that is assigned 1 will be shown. Default is always 0.
+
+`db.<collection_name>.find({},{<field>: 1})`
+
 
 
 

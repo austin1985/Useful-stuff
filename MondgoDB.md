@@ -108,5 +108,10 @@ Every field that is assigned 1 will be shown. Default is always 0.
 
 **Embedded document limit is 100 levels and the total size of one document is limited to 16mb**
 
+Display embedded document from a document
+
+`db.<collection_name>.findOne({<field>:<value>}).<document_name>`
+
+
 
 

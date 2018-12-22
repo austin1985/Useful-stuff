@@ -46,38 +46,51 @@
 ## Basic operation commands
 
 **Selecting a dababase**
+
 `use <database_name>`
 
 **Selecting all documents in a collection**
+
 `db.<collection_name>.find()`
 
 **Selecting specific documents in a collection**
+
 `db.<collection_name>.find({<fieldname>:<value>})`
 
 **Inserting one new document in the collection**
+
 `db.<collection_name>.insertOne({<field1>:<value1>,...})`
 
 **Inserting multiple new documents in the collection**
+
 `db.<collection_name>.insertMany([{<field1>:<value1>,...},...])`
 
 **Deleting one specific document from a collection**
+
 `db.<collection_name>.deleteOne({<fieldname>: <value>})`
 
 **Deleting multiple document matching the filter from a collection**
+
 `db.<collection_name>.deleteMany({<fieldname>: <value>})`
 
 **Delete all documents from a collection**
+
 `db.<collection_name>.deleteMany({})`
 
 **Update one specific document**
-First argument tells which document to alter, second argument tells what needs to update  
+
+First argument tells which document to alter, second argument tells what needs to update 
+
 `db.<collection_name>.updateOne({<filterField>:<filterValue>},{$set: {<field>:<value>}})`
 
 **Update multiple specific document**
+
 First argument tells which documents to alter, second argument tells what needs to update  
+
 `db.<collection_name>.updateMany({<filterField>:<filterValue>},{$set: {<field>:<value>}})`
 
 **Update all documents in a collection**
+
 `db.<collection_name>.updateMany({},{$set: {<field>:<value>}})`
 
 

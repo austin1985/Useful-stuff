@@ -43,7 +43,7 @@
 
 `sudo systemctl enable mongodb`
 
-## Basic operation commands
+## Basic CRUD operations
 
 **Selecting a dababase**
 

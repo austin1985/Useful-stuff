@@ -106,7 +106,7 @@ Every field that is assigned 1 will be shown. Default is always 0.
 `db.<collection_name>.find({},{<field>: 1})`
 
 
-
+**Embedded document limit is 100 levels and the total size of one document is limited to 16mb**
 
 
 

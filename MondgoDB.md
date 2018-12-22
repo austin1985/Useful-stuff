@@ -57,6 +57,11 @@
 
 `db.<collection_name>.find({<fieldname>:<value>})`
 
+`db.<collection_name>.find({<fieldname>:{$gt:<number>}})`
+
+Operators: https://docs.mongodb.com/manual/reference/operator/query/
+
+
 **Inserting one new document in the collection**
 
 `db.<collection_name>.insertOne({<field1>:<value1>,...})`

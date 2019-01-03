@@ -112,14 +112,15 @@ Display embedded document from a document
 
 `db.<collection_name>.findOne({<field>:<value>}).<embedded_document_name>`
 
+**Search in embedded documents**
 Search in embedded array value
 
-`db.<collection_name>.findOne({<array_field>:<value>})`
+`db.<collection_name>.find({<array_field>:<value>})`
 
 Search in embedded object field
 
-`db.<collection_name>.findOne({<object>.<field>:<value>})`
-`db.<collection_name>.findOne({<object1>.<object2>...<objectx><field>:<value>})`
+`db.<collection_name>.find({<object>.<field>:<value>})`
+`db.<collection_name>.find({<object1>.<object2>...<objectx><field>:<value>})`
 
 
 

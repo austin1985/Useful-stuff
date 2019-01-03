@@ -122,6 +122,18 @@ Search in embedded object field
 `db.<collection_name>.find({<object>.<field>:<value>})`
 `db.<collection_name>.find({<object1>.<object2>...<objectx><field>:<value>})`
 
+# Data types
+
+Text
+"test text"
+
+Boolean:
+[true,false]
+
+Number:
+- integer32
+- integer64
+
 
 
 

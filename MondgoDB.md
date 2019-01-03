@@ -141,11 +141,11 @@ ObjectId
 
 `ObjectId("idstring")`
 
-ISODate
+ISODate - can be created with "new Date()"
 
 `ISODate("2018-09-09")`
 
-Timestamp
+Timestamp - can be created with "new Timestamp()"
 
 `Timestamp(11421532)`
 

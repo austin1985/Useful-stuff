@@ -110,7 +110,17 @@ Every field that is assigned 1 will be shown. Default is always 0.
 
 Display embedded document from a document
 
-`db.<collection_name>.findOne({<field>:<value>}).<document_name>`
+`db.<collection_name>.findOne({<field>:<value>}).<embedded_document_name>`
+
+Search in embedded array value
+
+`db.<collection_name>.findOne({<array_field>:<value>})`
+
+Search in embedded object field
+
+`db.<collection_name>.findOne({<object>.<field>:<value>})`
+
+
 
 
 

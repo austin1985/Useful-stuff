@@ -124,20 +124,37 @@ Search in embedded object field
 
 # Data types
 
-Text
-"test text"
+Text:
+
+`"test text"`
 
 Boolean:
-[true,false]
+`[true,false]`
 
 Number:
-- integer32
-- integer64
 
+- `integer(int32)`
+- `NumberLong(int64)`
+- `NumberDecimal(float)`
 
+ObjectId
 
+`ObjectId("idstring")`
 
+ISODate
 
+`ISODate("2018-09-09")`
 
+Timestamp
+
+`Timestamp(11421532)`
+
+Embedded Document
+
+`{ "a" :{...}}`
+
+Array
+
+`{ "b" :{...}}`
 
 

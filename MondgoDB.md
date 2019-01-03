@@ -119,6 +119,9 @@ Search in embedded array value
 Search in embedded object field
 
 `db.<collection_name>.findOne({<object>.<field>:<value>})`
+`db.<collection_name>.findOne({<object1>.<object2>...<objectx><field>:<value>})`
+
+
 
 
 

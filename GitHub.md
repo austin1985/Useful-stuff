@@ -7,5 +7,6 @@
 
 
 ### Set the cache to timeout after 1 month (setting is in seconds)
-`git config --global credential.helper 'cache --timeout=2419200`
+`git config --global credential.helper cache --timeout=9999999999999999999999999999999999999999999999999999999999999999999999999999999999
+999999999999999999`
 

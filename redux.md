@@ -141,4 +141,27 @@ In the example we see that every reducer has an initial state with the relevant 
   For the store we need an initial state , define which middleware we want to use (optional) thunk in this case, and a route reducer. The index js file in the "reducers" folder is used as the root reducer. The last thing we need is a middleware handler. These three objects are needed for creating the store. We use compose so we can add one extra component which is what enables the redux dev tool in chrome and firefox.
   For middleware we are using **thunk** which makes possible that we use async functions inside our actions.
   
+## Add the Provider to the app.js ##
+
+ Example:
+ 
+ ```code
+ 
+  import { Provider } from 'react-redux'
+  import store from './store'
   
+  class App extends Component {
+	render() {
+      return (
+        <Provider store={store}>
+          <div>
+          ...
+          </div>
+        </Provider>
+      )
+    }
+  }
+  
+  export default App;
+ 
+ ```

@@ -1,11 +1,11 @@
-## Implementing Redux with React ##
+# Implementing Redux with React #
 
-- **Step install dependencies**
+## Install dependencies ##
   1. react-redux
   2. redux
   3. redux-thunk 
     
-- **Create action types and actions**
+## Create action types and actions ##
   1. create folder "actions"
   2. in "actions" folder create files "types.js" 
   3. in "actions" folder create all action files needed (auth,profile...etc) 
@@ -51,7 +51,7 @@
   Types.js defines the name of the actions. It is a convention to use string constants to describe action names.
   Actions are exported functions, these functions are called by the react components. The functions can call the dispatch     function which will update the state based on the reducers in the store. 
   
-- **Creating the reducers**
+## Creating the reducers ##
   
   1. create folder "reducers"
   2. in "reducers" folder create files for individual state elements (user,auth,...etc) 
@@ -107,7 +107,7 @@ In the example we see that every reducer has an initial state with the relevant 
 
   Index.js is used to combine reducers together. This way you only need to import this one js if you want to add the reducers to redux. 
 
-- **Create store**
+## Create store ##
 
   1. create folder "store"
   2. in "store" folder create store.js

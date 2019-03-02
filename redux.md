@@ -1,4 +1,4 @@
-### Implementing Redux with React ###
+## Implementing Redux with React ##
 
 - **Step install dependencies**
   1. react-redux
@@ -49,6 +49,6 @@
   ```
 
   Types.js defines the name of the actions. It is a convention to use string constants to describe action names.
-  Actions are exported functions, these functions are called by the react components. The functions can call the dispatch     function which is updating the state state in the store. 
+  Actions are exported functions, these functions are called by the react components. The functions can call the dispatch     function which will update the state in the store. 
   
   

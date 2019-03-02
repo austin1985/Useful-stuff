@@ -49,6 +49,40 @@
   ```
 
   Types.js defines the name of the actions. It is a convention to use string constants to describe action names.
-  Actions are exported functions, these functions are called by the react components. The functions can call the dispatch     function which will update the state in the store. 
+  Actions are exported functions, these functions are called by the react components. The functions can call the dispatch     function which will update the state based on the reducers in the store. 
   
+- **Creating the reducers**
   
+  1. create folder "reducers"
+  2. in "reducers" folder create files for individual state elements (user,auth,...etc) 
+  
+  Example:
+  
+  ```code
+  
+  import { SET_CURRENT_USER } from '../actions/types'
+
+  const initialState = {
+      isAuthenticated: false,
+      user: {}
+  }
+
+  export default function (state = initialState, action) {
+      switch (action.type) {
+          case SET_CURRENT_USER:
+              return {
+                  ...state,
+                  isAuthenticated: !isEmpty(action.payload),
+                  user: action.payload
+              }
+          default:
+              return state;
+      }
+  }
+  
+  ```
+
+  Reducers specify how the application's state changes in response to actions sent to the store. Remember that actions only describe what happened, but don't describe how the application's state changes.
+In the example we see that every reducer has an initial state with the relevant information. The reducer also contains a function with the switch. In the function you must describe wich actions should be picked up by the reducer and how the state should be altered. In this case the store state should be extended with the user and the isAuthenticated flag should be set to true. These are the values that are eventually set in the store.
+
+

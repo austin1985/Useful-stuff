@@ -55,8 +55,11 @@
   
   1. create folder "reducers"
   2. in "reducers" folder create files for individual state elements (user,auth,...etc) 
+  3. in "reducers" folder create index.js file (combining reducers together)
   
   Example:
+  
+  **authReducer.js**
   
   ```code
   
@@ -81,8 +84,27 @@
   }
   
   ```
+  
+  **index.js**
+  
+  ```code
+  
+    import {combineReducers} from 'redux'
+    import authReducer from './authReducer'
+    import errorReducer from './errorReducer'
+
+    export default combineReducers({
+
+        auth: authReducer,
+        errors: errorReducer
+
+    })
+  
+  ```
 
   Reducers specify how the application's state changes in response to actions sent to the store. Remember that actions only describe what happened, but don't describe how the application's state changes.
-In the example we see that every reducer has an initial state with the relevant information. The reducer also contains a function with the switch. In the function you must describe wich actions should be picked up by the reducer and how the state should be altered. In this case the store state should be extended with the user and the isAuthenticated flag should be set to true. These are the values that are eventually set in the store.
+In the example we see that every reducer has an initial state with the relevant information. The reducer also contains a function with the switch. In the function you must describe wich actions should be picked up by the reducer and how the state should be altered. In this case the store state should be extended with the user and the isAuthenticated flag should be set to true. 
+
+  Index.js is used to combine reducers together. This way you only need to import this one js if you want to add the reducers to redux. 
 
 

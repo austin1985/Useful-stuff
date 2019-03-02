@@ -48,7 +48,7 @@
   }
   ```
 
-Types.js defines the name of the actions. It is a convention to use string constants to describe action names.
-Actions are exported functions, these functions are called by the react components. The functions can call the dispatch function which is updating the state state in the store. 
+  Types.js defines the name of the actions. It is a convention to use string constants to describe action names.
+  Actions are exported functions, these functions are called by the react components. The functions can call the dispatch     function which is updating the state state in the store. 
   
   

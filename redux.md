@@ -1,24 +1,26 @@
 ### Implementing Redux with React ###
 
-- Step install dependencies
+- **Step install dependencies**
   1. react-redux
   2. redux
   3. redux-thunk 
     
-- Create action types and actions
+- **Create action types and actions**
   1. create folder "actions"
   2. in "actions" folder create files "types.js" 
   3. in "actions" folder create all action files needed (auth,profile...etc) 
 
   Example:
   
-  ```code
-  types.js
+  **types.js**
   
+  ```code 
   export const GET_ERRORS = 'GET_ERRORS'
   export const SET_CURRENT_USER = 'SET_CURRENT_USER'
+  ```
   
-  authActions.js
+  **authActions.js**
+  ```code 
   import { GET_ERRORS } from './types'
   import { SET_CURRENT_USER } from './types'
   
@@ -44,7 +46,9 @@
               })
           })
   }
-  
- ```
+  ```
+
+Types.js defines the name of the actions. It is a convention to use string constants to describe action names.
+Actions are exported functions, these functions are called by the react components. The functions can call the dispatch function which is updating the state state in the store. 
   
   

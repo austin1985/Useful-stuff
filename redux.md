@@ -107,4 +107,38 @@ In the example we see that every reducer has an initial state with the relevant 
 
   Index.js is used to combine reducers together. This way you only need to import this one js if you want to add the reducers to redux. 
 
+- **Create store**
 
+  1. create folder "store"
+  2. in "store" folder create store.js
+
+  Example:
+  
+  **store.js**
+  
+  ```code
+  
+  import { createStore, applyMiddleware, compose } from 'redux'
+  import thunk from 'redux-thunk'
+  import rootReducer from './reducers'
+
+  const initialState = {}
+
+  const middleware = [thunk]
+
+  const store = createStore(
+      rootReducer,
+      initialState,
+      compose(applyMiddleware(...middleware),
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+      )
+  )
+
+  export default store
+  
+  ```
+  
+  For the store we need an initial state , define which middleware we want to use (optional) thunk in this case, and a route reducer. The index js file in the "reducers" folder is used as the root reducer. The last thing we need is a middleware handler. These three objects are needed for creating the store. We use compose so we can add one extra component which is what enables the redux dev tool in chrome and firefox.
+  For middleware we are using **thunk** which makes possible that we use async functions inside our actions.
+  
+  

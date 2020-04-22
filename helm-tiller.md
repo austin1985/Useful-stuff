@@ -1,6 +1,6 @@
-On tiller not found error create following yaml-file
+## On tiller not found error create following yaml-file
 
-
+```
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -19,5 +19,15 @@ subjects:
   - kind: ServiceAccount
     name: tiller
     namespace: kube-system
+```
 
 
+## Get old tiller replicaset name
+```
+kubectl -n kube-system get replicaset
+```
+
+## Delete old replicaset 
+```
+kubectl -n kube-system delete replicaset tiller-deploy-xxxxxxx
+```

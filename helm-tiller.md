@@ -31,3 +31,8 @@ kubectl -n kube-system get replicaset
 ```
 kubectl -n kube-system delete replicaset tiller-deploy-xxxxxxx
 ```
+
+## Init helm
+```
+helm init
+```
